@@ -17,7 +17,7 @@ export default function IntroPage() {
         }
       </div>
       <div className="">
-        <Image src={'/intropage1.png'} alt='symbol' height={600} width={600} className='h-[70vh] w-fit' />
+        <Image src={'/intropage1.png'} alt='symbol' height={600} width={600} className='h-[70vh] w-fit rounded' />
       </div>
     </div>
   )
