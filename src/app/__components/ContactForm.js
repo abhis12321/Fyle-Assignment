@@ -1,12 +1,18 @@
 import React, { useState } from 'react'
 
-export default function ContactForm() {
+export default function ContactForm({setContact}) {
     const [email , setEmail] = useState();
     const [fname , setFName] = useState();
     const [lname , setLName] = useState();
+
+    const handleSumbit = e => {
+        e.preventDefault();
+        setContact(false);
+    }
+
     return (
         <div className='fixed top-0 left-0 h-[100vh] w-full bg-gray-200 flex items-center justify-center'>
-            <from className="flex flex-col gap-10 bg-white shadow-[0_0_5px_gray] rounded-md w-[570px] py-6 px-8">
+            <form className="flex flex-col gap-10 bg-white shadow-[0_0_5px_gray] rounded-md w-[570px] py-6 px-8" onSubmit={handleSumbit}>
                 <h2 className="text-[1.7rem] font-bold font-sans text-gray-700">Talk to us</h2>
                 <div className="flex flex-col border-b-[2px] border-gray-400">
                     <label htmlFor="email" className={`text-gray-500 cursor-text`}>Work email</label>
@@ -27,7 +33,7 @@ export default function ContactForm() {
                     <label htmlFor="t&c" className="text-gray-500 font-sans leading-5">I agree to Fyle's terms and conditions, and provide consent to send me communication</label>
                 </div>
                 <button className='py-4 px-5 bg-rose-600 text-white font-semibold rounded-md'>Contact us</button>
-            </from>
+            </form>
         </div>
     )
 }
