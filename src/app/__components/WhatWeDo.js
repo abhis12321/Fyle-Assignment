@@ -1,4 +1,5 @@
 import React from 'react'
+import WhatWeDoImage from './WhatWeDoImage'
 
 export default function WhatWeDo() {
   return (
@@ -9,6 +10,14 @@ export default function WhatWeDo() {
                 <div className="text-[2rem] font-bold w-[710px] font-sans leading-[2.5rem]">SERVICES PROVIDE FOR YOU</div>
                 <div className="text-[10px] text-gray-500 font-semibold leading-[1.2rem]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque sit, velit excepturi ea cum neque accusamus, libero eius beatae nostrum quae quasi provident dignissimos debitis est vel et non harum! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, natus.</div>
             </div>
+
+            <div className="flex gap-5">
+                <WhatWeDoImage image={'/whatWeDo1.png'} />
+                <WhatWeDoImage image={'/whatWeDo2.png'} />
+                <WhatWeDoImage image={'/whatWeDo3.png'} />
+                <WhatWeDoImage image={'/whatWeDo1.png'} />
+            </div>
+            
         </div>
     </div>
   )
